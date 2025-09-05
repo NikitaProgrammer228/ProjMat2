@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+:focus-visible { outline: 2px solid #0ea5e9; outline-offset: 3px; }
+
+/* --- Logo carousel --- */
+@keyframes marquee { 0%{ transform: translateX(0)} 100%{ transform: translateX(-50%)} }
+.logo-carousel {
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+.logo-track { display:flex; width:max-content; gap:3rem; animation:marquee 40s linear infinite; }
+.logo-carousel:hover .logo-track { animation-play-state: paused; }
+dialog.logo-modal { border:none; border-radius:16px; padding:0; }
+dialog.logo-modal::backdrop { background: rgba(0,0,0,.5); }

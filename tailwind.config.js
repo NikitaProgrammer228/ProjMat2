@@ -1,0 +1,6 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./app/**/*.{js,jsx,ts,tsx}","./components/**/*.{js,jsx,ts,tsx}"],
+  theme: { extend: { container: { center: true, padding: "1rem", screens: { "2xl": "1180px" } } } },
+  plugins: []
+}
