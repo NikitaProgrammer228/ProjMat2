@@ -4,11 +4,11 @@ export default function SiteFooter() {
       <div className="container mx-auto px-4 py-10 grid md:grid-cols-4 gap-8">
         <div>
           <div className="flex items-center gap-3">
-            <img alt="Logo" className="h-9 w-9" src="https://dummyimage.com/72x72/0ea5e9/ffffff.png&text=MM"/>
-            <span className="font-semibold">Your Company</span>
+            <img alt="FENS Logo" className="h-9 w-auto" src="/images/FENS-Hi-Res-Logo-16May22.pdf.png"/>
+            <span className="font-semibold">FENS</span>
           </div>
           <p className="mt-3 text-sm text-slate-600">Security & life safety technology integrator.</p>
-          <p className="mt-4 text-xs text-slate-500">© {new Date().getFullYear()} Your Company.</p>
+          <p className="mt-4 text-xs text-slate-500">© {new Date().getFullYear()} FENS.</p>
         </div>
         <div><h4 className="font-semibold">Services</h4>
           <ul className="mt-3 space-y-2 text-sm">
