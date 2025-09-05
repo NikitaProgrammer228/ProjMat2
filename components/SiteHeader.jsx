@@ -18,7 +18,7 @@ export default function SiteHeader() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             <Link href="/" className="flex items-center gap-3">
-              <img alt="FENS Logo" className="h-9 w-auto" src="/images/FENS-Hi-Res-Logo-16May22.pdf.png" />
+              <img alt="FENS Logo" className="h-12 w-auto" src="/images/FENS-Hi-Res-Logo-16May22.pdf.png" />
               <span className="font-semibold text-lg tracking-tight">FENS</span>
             </Link>
             <button onClick={() => setOpen(v => !v)} className="lg:hidden p-2 rounded-md border border-slate-300" aria-expanded={open} aria-controls="primaryNav" aria-label="Open menu">☰</button>
