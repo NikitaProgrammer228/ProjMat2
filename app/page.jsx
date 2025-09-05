@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <>
       <section id="home" className="relative overflow-hidden">
-        <Image src="/hero.jpg" alt="Security operations background" fill className="object-cover opacity-20" priority />
+        <Image src="/images/Camers.jpeg" alt="Security operations background" fill className="object-cover opacity-20" priority />
         <div className="container mx-auto px-4">
           <div className="relative py-20 md:py-28">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Local Focus — Global Reach</h1>
