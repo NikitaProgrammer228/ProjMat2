@@ -8,8 +8,7 @@ export default function HomePage() {
         <Image src="/images/Main-Picture.png" alt="Security operations background" fill className="object-cover opacity-20" priority />
         <div className="container mx-auto px-4">
           <div className="relative py-20 md:py-28">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">Local Focus — Global Reach</h1>
-            <p className="mt-4 max-w-2xl text-lg text-slate-700">Enterprise security & life safety systems. Design, deploy, and support at scale.</p>
+            <p className="mt-16 max-w-2xl text-lg text-slate-700">Enterprise security & life safety systems. Design, deploy, and support at scale.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#contact" className="inline-flex items-center rounded-xl bg-sky-600 text-white px-6 py-3 font-medium shadow hover:bg-sky-700">Get a Quote</a>
               <a href="/about" className="inline-flex items-center rounded-xl border border-slate-300 px-6 py-3 font-medium hover:bg-slate-50">How we work</a>
