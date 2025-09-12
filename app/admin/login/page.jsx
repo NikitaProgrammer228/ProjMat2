@@ -14,7 +14,8 @@ export default function LoginPage() {
     // Простой пароль для демонстрации
     if (password === 'admin123') {
       // Ставим cookie, которую проверяет middleware
-      document.cookie = 'admin_auth=1; path=/; SameSite=Lax';
+      const expires = new Date(Date.now() + 7*24*60*60*1000).toUTCString();
+      document.cookie = `admin_auth=1; Path=/; Expires=${expires}; SameSite=Lax`;
       router.push('/admin');
     } else {
       setError('Неверный пароль');

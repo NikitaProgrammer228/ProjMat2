@@ -7,6 +7,17 @@
   </head>
   <body>
     <script>
+      // Simple guard: redirect unauthenticated users to /admin/login
+      (function () {
+        var authed = document.cookie.split(';').some(function (c) {
+          return c.trim().indexOf('admin_auth=1') === 0;
+        });
+        if (!authed) {
+          window.location.replace('/admin/login');
+        }
+      })();
+    </script>
+    <script>
       // Disable auto init first
       window.CMS_MANUAL_INIT = true;
     </script>
