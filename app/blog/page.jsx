@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAllPostsMeta } from "../../lib/posts";
 export const metadata = { title: "Blog — Your Company" };
+export const dynamic = 'force-dynamic';
 export default function BlogPage() {
   const posts = getAllPostsMeta();
   return (

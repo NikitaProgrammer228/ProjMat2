@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { getAllSlugs, getPostBySlug } from "../../../lib/posts";
 export async function generateStaticParams() { const slugs = getAllSlugs(); return slugs.map(slug => ({ slug })); }
+export const dynamic = 'force-dynamic';
 export async function generateMetadata({ params }) { const { meta } = await getPostBySlug(params.slug).catch(() => ({ meta: null })); return { title: meta ? `${meta.title} — Blog` : "Post — Blog", description: meta?.excerpt || "Blog post" }; }
 export default async function PostPage({ params }) {
   const { meta, contentHtml } = await getPostBySlug(params.slug);
