@@ -14,10 +14,11 @@
     <script>
       const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
       if (window.CMS && window.CMS.init) {
+        var defaultBranch = 'master';
         window.CMS.init({
           config: {
             local_backend: isLocal,
-            backend: isLocal ? { name: 'test-repo' } : { name: 'git-gateway', branch: 'main' },
+            backend: isLocal ? { name: 'test-repo' } : { name: 'git-gateway', branch: defaultBranch },
             media_folder: 'public/uploads',
             public_folder: '/uploads',
             collections: [
