@@ -6,29 +6,18 @@
     <title>CMS</title>
   </head>
   <body>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
-      // Simple guard: redirect unauthenticated users to /admin/login
-      (function () {
-        var authed = document.cookie.split(';').some(function (c) {
-          return c.trim().indexOf('admin_auth=1') === 0;
-        });
-        if (!authed) {
-          window.location.replace('/admin/login');
-        }
-      })();
-    </script>
-    <script>
-      // Disable auto init first
       window.CMS_MANUAL_INIT = true;
     </script>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
     <script>
-      // Inline config to avoid path issues during local dev
+      const isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
       if (window.CMS && window.CMS.init) {
         window.CMS.init({
           config: {
-            local_backend: true,
-            backend: { name: 'git-gateway', branch: 'main' },
+            local_backend: isLocal,
+            backend: isLocal ? { name: 'test-repo' } : { name: 'git-gateway', branch: 'main' },
             media_folder: 'public/uploads',
             public_folder: '/uploads',
             collections: [
