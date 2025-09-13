@@ -7,7 +7,7 @@ export default function SiteHeader() {
     <>
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between py-4">
+          <div className="flex items-center justify-between py-0">
             <Link href="/" className="flex items-center">
               <img alt="FENS Logo" className="h-40 w-auto" src="/images/FENS-Hi-Res-Logo-16May22.pdf.png" />
             </Link>
