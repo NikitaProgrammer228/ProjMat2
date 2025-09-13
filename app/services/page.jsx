@@ -83,21 +83,21 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
-      <section className="relative h-96 overflow-hidden">
+      <section className="relative h-[500px] overflow-hidden">
         <Image
           src="/images/header-what-we-do.jpg"
           alt="What we do"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-black/40"></div>
         <div className="container mx-auto px-4 relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in-up">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in-up drop-shadow-lg">
               What we do
             </h1>
-            <div className="w-24 h-1 bg-white mx-auto animate-fade-in-up animation-delay-400"></div>
+            <div className="w-24 h-1 bg-white mx-auto animate-fade-in-up animation-delay-400 shadow-lg"></div>
           </div>
         </div>
       </section>
