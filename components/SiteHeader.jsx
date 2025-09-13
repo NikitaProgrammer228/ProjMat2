@@ -5,15 +5,6 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="bg-slate-900 text-slate-100 text-sm">
-        <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-          <a href="tel:+10000000000" className="hover:underline">+1 (000) 000-0000</a>
-          <nav className="space-x-6">
-            <Link href="/#support" className="hover:underline">Support</Link>
-            <Link href="/#login" className="hover:underline">Employee Login</Link>
-          </nav>
-        </div>
-      </div>
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
