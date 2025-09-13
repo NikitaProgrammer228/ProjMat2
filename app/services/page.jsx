@@ -91,7 +91,7 @@ export default function ServicesPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/10 to-black/20"></div>
         <div className="container mx-auto px-4 relative z-10 h-full flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 animate-fade-in-up drop-shadow-lg">
