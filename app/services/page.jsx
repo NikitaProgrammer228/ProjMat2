@@ -147,13 +147,6 @@ export default function ServicesPage() {
                     ))}
                   </div>
                   
-                  {/* Hover effect indicator */}
-                  <div className="mt-6 flex items-center text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-sm font-medium mr-2">Learn More</span>
-                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
                 </div>
               </div>
             ))}
@@ -168,13 +161,7 @@ export default function ServicesPage() {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Contact us today to discuss your project requirements and get a customized solution for your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-900 font-semibold rounded-lg hover:bg-blue-50 transition-colors duration-300 transform hover:scale-105"
-            >
-              Get a Quote
-            </a>
+          <div className="flex justify-center">
             <a
               href="/about"
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105"

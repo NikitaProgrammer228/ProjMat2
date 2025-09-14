@@ -15,10 +15,8 @@ export default function SiteHeader() {
             <nav id="primaryNav" className={`${open ? "" : "hidden"} lg:block`}>
               <ul className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-6">
                 <li><Link className="hover:text-sky-600" href="/services">Services</Link></li>
-                <li><Link className="hover:text-sky-600" href="/markets">Markets</Link></li>
                 <li><Link className="hover:text-sky-600" href="/about">About</Link></li>
                 <li><Link className="hover:text-sky-600" href="/blog">Blog</Link></li>
-                <li><Link className="hover:text-sky-600" href="/#contact">Contact</Link></li>
               </ul>
             </nav>
           </div>

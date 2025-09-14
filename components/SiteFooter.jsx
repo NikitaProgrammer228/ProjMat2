@@ -12,10 +12,11 @@ export default function SiteFooter() {
         </div>
         <div><h4 className="font-semibold">Services</h4>
           <ul className="mt-3 space-y-2 text-sm">
-            <li><a className="hover:underline" href="/services">Video Surveillance</a></li>
-            <li><a className="hover:underline" href="/services">Access Control</a></li>
-            <li><a className="hover:underline" href="/services">Fire Alarm</a></li>
-            <li><a className="hover:underline" href="/services">Managed Services</a></li>
+            <li><a className="hover:underline" href="/services">Security Systems</a></li>
+            <li><a className="hover:underline" href="/services">AV Systems</a></li>
+            <li><a className="hover:underline" href="/services">Data Network</a></li>
+            <li><a className="hover:underline" href="/services">Solar Systems</a></li>
+            <li><a className="hover:underline" href="/services">Fabrication</a></li>
           </ul>
         </div>
         <div><h4 className="font-semibold">Company</h4>
@@ -23,12 +24,6 @@ export default function SiteFooter() {
             <li><a className="hover:underline" href="/about">About</a></li>
             <li><a className="hover:underline" href="/blog">Blog</a></li>
             <li><a className="hover:underline" href="/#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div><h4 className="font-semibold">Legal</h4>
-          <ul className="mt-3 space-y-2 text-sm">
-            <li><a className="hover:underline" href="#">Privacy Policy</a></li>
-            <li><a className="hover:underline" href="#">Terms</a></li>
           </ul>
         </div>
       </div>
