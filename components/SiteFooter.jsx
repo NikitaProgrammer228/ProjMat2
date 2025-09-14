@@ -5,7 +5,6 @@ export default function SiteFooter() {
         <div>
           <div className="flex items-center gap-3">
             <img alt="FENS Logo" className="h-9 w-auto" src="/images/FENS-Hi-Res-Logo-16May22.pdf.png"/>
-            <span className="font-semibold">FENS</span>
           </div>
           <p className="mt-3 text-sm text-slate-600">Security & life safety technology integrator.</p>
           <p className="mt-4 text-xs text-slate-500">© {new Date().getFullYear()} FENS.</p>
