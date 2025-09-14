@@ -3,22 +3,23 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 
 const logos = [
-  { src: "/logos/ohi.png", title: "OHI Group", desc: "Крупная группа компаний. (Заменить на точный текст.)" },
-  { src: "/logos/alsaada.png", title: "Alsaada Group", desc: "Оманская группа компаний. (Ваш текст.)" },
-  { src: "/logos/bishara.png", title: "Bishara EST", desc: "Поставки и услуги. (Ваш текст.)" },
-  { src: "/logos/muscat-municipality.png", title: "Muscat Municipality", desc: "Городское управление Маската." },
-  { src: "/logos/gov-om.png", title: "Gov.om", desc: "Правительственный портал Омана.", dark: true },
+  { src: "/logos/absen.png", title: "Absen", desc: "LED display technology solutions." },
   { src: "/logos/agi.png", title: "AGI — Al Hosni Group", desc: "Al Hosni Group International." },
-  { src: "/logos/ray-energy.png", title: "RAY International Energy", desc: "Энергетические проекты." },
-  { src: "/logos/oman-airports.png", title: "Oman Airports", desc: "Аэропорты Омана. (Ваш текст.)", dark: true },
-  { src: "/logos/client-9.png", title: "Client", desc: "Описание клиента." },
-  { src: "/logos/omanoil.png", title: "Oman Oil Marketing", desc: "Топливо и сопутствующие сервисы.", dark: true },
-  { src: "/logos/mec.png", title: "Middle East College (MEC)", desc: "Частный колледж в Маскате.", dark: true },
-  { src: "/logos/oq.png", title: "OQ", desc: "Интегрированная энергетическая компания Омана." },
-  { src: "/logos/squ.png", title: "Sultan Qaboos University", desc: "Крупнейший государственный университет Омана." },
-  { src: "/logos/rop.png", title: "Royal Oman Police (ROP)", desc: "Ведомство по охране правопорядка." },
-  { src: "/logos/nizwa.jpg", title: "University of Nizwa", desc: "Независимый университет." },
-  { src: "/logos/asharqiyah.png", title: "A' Sharqiyah University", desc: "Университет в Ибре." },
+  { src: "/logos/alsaada.png", title: "Alsaada Group", desc: "Omani group of companies." },
+  { src: "/logos/asharqiyah.png", title: "A' Sharqiyah University", desc: "University in Ibra." },
+  { src: "/logos/bishara.png", title: "Bishara EST", desc: "Supplies and services." },
+  { src: "/logos/gov-om-black.png", title: "Gov.om", desc: "Oman government portal.", dark: true },
+  { src: "/logos/mec-black.png", title: "Middle East College (MEC)", desc: "Private college in Muscat.", dark: true },
+  { src: "/logos/muscat-municipality.jpg", title: "Muscat Municipality", desc: "Muscat city administration." },
+  { src: "/logos/nizwa.jpg", title: "University of Nizwa", desc: "Independent university." },
+  { src: "/logos/ohi.png", title: "OHI Group", desc: "Major group of companies." },
+  { src: "/logos/oia.png", title: "Oman Investment Authority", desc: "Sovereign wealth fund of Oman." },
+  { src: "/logos/oman-airports-black.png", title: "Oman Airports", desc: "Oman airports management.", dark: true },
+  { src: "/logos/omanoil-black.png", title: "Oman Oil Marketing", desc: "Fuel and related services.", dark: true },
+  { src: "/logos/oq.png", title: "OQ", desc: "Integrated energy company of Oman." },
+  { src: "/logos/rop.png", title: "Royal Oman Police (ROP)", desc: "Law enforcement agency." },
+  { src: "/logos/shell.png", title: "Shell", desc: "Global energy company." },
+  { src: "/logos/squ.png", title: "Sultan Qaboos University", desc: "Largest public university in Oman." },
 ];
 
 export default function LogoCarousel() {
@@ -44,7 +45,7 @@ export default function LogoCarousel() {
                 <li key={i}>
                   <button
                     onClick={() => openModal(l)}
-                    className={`inline-flex items-center justify-center rounded-xl border px-4 py-3 shadow-sm hover:shadow transition ${l.dark ? "bg-slate-900 border-slate-700" : "bg-slate-50 border-slate-200"}`}
+                    className={`inline-flex items-center justify-center rounded-xl border px-4 py-3 shadow-sm hover:shadow transition ${l.dark ? "bg-white border-slate-200" : "bg-slate-50 border-slate-200"}`}
                   >
                     <Image src={l.src} alt={l.title} width={200} height={80} className="h-10 w-auto object-contain" />
                   </button>
