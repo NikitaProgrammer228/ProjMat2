@@ -33,8 +33,7 @@ export default function LogoCarousel() {
       <div className="container mx-auto px-4">
         <div className="flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-3xl font-bold tracking-tight">They trust us</h2>
-            <p className="mt-2 text-slate-600">Карусель логотипов с всплывающими описаниями.</p>
+            <h2 className="text-3xl font-bold tracking-tight">Trusted partners</h2>
           </div>
         </div>
 
@@ -54,7 +53,6 @@ export default function LogoCarousel() {
             </ul>
           </div>
         </div>
-        <p className="mt-3 text-xs text-slate-500">Наведи мышкой — прокрутка остановится. Клик — описание.</p>
       </div>
 
       <dialog ref={modalRef} className="logo-modal w-full max-w-xl">
