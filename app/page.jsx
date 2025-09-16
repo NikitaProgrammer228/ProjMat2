@@ -8,7 +8,7 @@ export default function HomePage() {
         <Image src="/images/Main-Picture.png" alt="Security operations background" fill className="object-cover opacity-40" priority />
         <div className="container mx-auto px-4">
           <div className="relative py-20 md:py-28">
-            <p className="mt-16 max-w-2xl text-lg text-slate-700 drop-shadow-lg">Custom Solutions for Real Needs<br />From perimeter protection to smart networks — we make it simple.</p>
+            <p className="mt-20 max-w-2xl text-xl font-semibold text-slate-700 drop-shadow-lg">Custom Solutions for Real Needs<br />From perimeter protection to smart networks — we make it simple.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#contact" className="inline-flex items-center rounded-xl bg-sky-600 text-white px-6 py-3 font-medium shadow hover:bg-sky-700">Get a Quote</a>
             </div>
@@ -38,7 +38,7 @@ export default function HomePage() {
                   alt="FENS technology solutions" 
                   width={600} 
                   height={400}
-                  className="w-full h-auto object-cover"
+                  className="h-auto object-contain"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
