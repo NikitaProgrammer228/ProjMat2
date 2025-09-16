@@ -36,9 +36,12 @@ export default function HomePage() {
                 <img 
                   src="/images/Camers.jpeg" 
                   alt="FENS technology solutions" 
-                  width="600"
-                  height="400"
-                  style={{ maxWidth: '100%', height: 'auto' }}
+                  style={{ 
+                    width: '500px', 
+                    height: '333px', 
+                    objectFit: 'contain',
+                    maxWidth: '100%'
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
