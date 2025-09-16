@@ -5,7 +5,14 @@ export default function HomePage() {
   return (
     <>
       <section id="home" className="relative overflow-hidden">
-        <Image src="/images/Main-Picture.png" alt="Security operations background" fill className="object-cover opacity-40" priority />
+        <Image 
+          src="/images/Main-Picture.png" 
+          alt="Security operations background" 
+          fill 
+          className="object-cover object-center opacity-40" 
+          priority
+          sizes="100vw"
+        />
         <div className="container mx-auto px-4">
           <div className="relative py-20 md:py-28">
             <p className="mt-20 max-w-2xl text-xl font-semibold text-slate-700 drop-shadow-lg">Custom Solutions for Real Needs<br />From perimeter protection to smart networks — we make it simple.</p>
@@ -32,16 +39,14 @@ export default function HomePage() {
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl flex justify-center">
-                <img 
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Image 
                   src="/images/Camers.jpeg" 
                   alt="FENS technology solutions" 
-                  style={{ 
-                    width: '500px', 
-                    height: '333px', 
-                    objectFit: 'contain',
-                    maxWidth: '100%'
-                  }}
+                  width={600} 
+                  height={400}
+                  className="h-auto object-contain"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
