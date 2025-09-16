@@ -33,13 +33,12 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl flex justify-center">
-                <Image 
+                <img 
                   src="/images/Camers.jpeg" 
                   alt="FENS technology solutions" 
-                  width={600} 
-                  height={400}
-                  className="object-contain"
-                  priority
+                  width="600"
+                  height="400"
+                  style={{ maxWidth: '100%', height: 'auto' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
