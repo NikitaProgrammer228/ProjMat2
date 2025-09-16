@@ -47,7 +47,7 @@ export default function HomePage() {
             
             <div className="order-1 lg:order-2 space-y-6">
               <h3 className="text-2xl font-bold text-slate-900">
-                Fens for Every Job
+                Fens for Every Task
               </h3>
               <p className="text-slate-600 leading-relaxed">
                 Why hire four different companies when you can hire one? We manage your entire project, from installing security cameras to setting up your office for video calls. Our ability to make custom parts means we always find the best solution.
