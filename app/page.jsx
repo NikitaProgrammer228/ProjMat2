@@ -9,7 +9,7 @@ export default function HomePage() {
           src="/images/Main-Picture.png" 
           alt="Security operations background" 
           fill 
-          className="object-cover object-center opacity-40" 
+          className="object-contain object-center opacity-40" 
           priority
           sizes="100vw"
         />
