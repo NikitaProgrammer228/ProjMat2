@@ -4,18 +4,20 @@ import LogoCarousel from "../components/LogoCarousel";
 export default function HomePage() {
   return (
     <>
-      <section id="home" className="relative overflow-hidden">
+      <section id="home" className="relative overflow-hidden min-h-[360px] sm:min-h-[420px] md:min-h-[520px]">
         <Image 
           src="/images/Main-Picture.png" 
           alt="Security operations background" 
           fill 
-          className="object-contain object-center opacity-40" 
+          className="object-cover md:object-contain object-center opacity-40" 
           priority
           sizes="100vw"
         />
+        {/* Mobile overlay to improve text readability */}
+        <div className="absolute inset-0 bg-black/20 md:bg-transparent" />
         <div className="container mx-auto px-4">
           <div className="relative py-20 md:py-28">
-            <p className="mt-20 max-w-2xl text-xl font-semibold text-slate-700 drop-shadow-lg">Custom Solutions for Real Needs<br />From perimeter protection to smart networks — we make it simple.</p>
+            <p className="mt-20 max-w-2xl text-xl font-semibold text-white md:text-slate-700 drop-shadow-lg">Custom Solutions for Real Needs<br />From perimeter protection to smart networks — we make it simple.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#contact" className="inline-flex items-center rounded-xl bg-sky-600 text-white px-6 py-3 font-medium shadow hover:bg-sky-700">Get a Quote</a>
             </div>
