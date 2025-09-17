@@ -46,12 +46,12 @@ export default function HomePage() {
                 <p className="text-sky-100 mb-6 leading-relaxed">
                   Transfer your existing security, AV, and network maintenance to us. Get professional service, better response times, and save money.
                 </p>
-                <button className="inline-flex items-center bg-white text-sky-600 px-6 py-3 rounded-xl font-semibold hover:bg-sky-50 transition-colors">
+                <a href="#contact" className="inline-flex items-center bg-white text-sky-600 px-6 py-3 rounded-xl font-semibold hover:bg-sky-50 transition-colors">
                   Calculate Savings
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
 
