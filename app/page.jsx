@@ -25,6 +25,80 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Sales Block Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Main Sales Block */}
+            <div className="lg:col-span-1 bg-gradient-to-br from-sky-600 to-sky-700 rounded-2xl p-8 text-white relative overflow-hidden">
+              {/* Decorative circles */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full"></div>
+              <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-white/10 rounded-full"></div>
+              <div className="absolute top-1/2 right-1/4 w-16 h-16 bg-white/5 rounded-full"></div>
+              
+              <div className="relative z-10">
+                <div className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4">
+                  Complete Package
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold mb-4 leading-tight">
+                  Bring All Your Systems to FENS
+                </h2>
+                <p className="text-sky-100 mb-6 leading-relaxed">
+                  Transfer your existing security, AV, and network maintenance to us. Get professional service, better response times, and save money.
+                </p>
+                <button className="inline-flex items-center bg-white text-sky-600 px-6 py-3 rounded-xl font-semibold hover:bg-sky-50 transition-colors">
+                  Calculate Savings
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            {/* Secondary Blocks */}
+            <div className="lg:col-span-2 space-y-6">
+              {/* Block 1 */}
+              <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">
+                      Migration Bonus
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                      Free System Health Check Worth $500
+                    </h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Switch your maintenance to FENS and get a complete technical audit of all your systems at no extra cost.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Block 2 */}
+              <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full">
+                      FENS Advantage
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                      Custom Fabrication Services Included
+                    </h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Need new brackets, mounts, or custom parts? Get priority access to our workshop with 20% discount on all fabrication work.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <LogoCarousel />
 
       {/* All Tech Needs Section */}
