@@ -22,7 +22,7 @@ export default function SiteFooter() {
           <ul className="mt-3 space-y-2 text-sm">
             <li><a className="hover:underline" href="/about">About</a></li>
             <li><a className="hover:underline" href="/blog">Blog</a></li>
-            <li><a className="hover:underline" href="/#contact">Contact</a></li>
+            <li><a className="hover:underline" href="/contact">Contact</a></li>
           </ul>
         </div>
       </div>

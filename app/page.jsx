@@ -206,9 +206,9 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold tracking-tight">Ready to get started?</h2>
             <p className="mt-3 text-slate-600">Tell us about your sites and timelines. We'll respond within one business day.</p>
             <ul className="mt-6 space-y-3 text-slate-700">
-              <li>📞 <a className="hover:underline" href="tel:+10000000000">+1 (000) 000-0000</a></li>
-              <li>✉️ <a className="hover:underline" href="mailto:hello@example.com">hello@example.com</a></li>
-              <li>📍 100 Main St, City, ST</li>
+              <li>📞 <a className="hover:underline" href="tel:+96822006467">+968 22006467</a></li>
+              <li>✉️ <a className="hover:underline" href="mailto:support@fensoman.com">support@fensoman.com</a></li>
+              <li>📍 P.O.Box 180, Muscat, Oman</li>
             </ul>
           </div>
           <form className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm" action="https://formspree.io/f/your-id" method="POST">

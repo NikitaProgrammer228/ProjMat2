@@ -18,6 +18,7 @@ export default function SiteHeader() {
                 <li><Link className="hover:text-sky-600" href="/services">Services</Link></li>
                 <li><Link className="hover:text-sky-600" href="/about">About</Link></li>
                 <li><Link className="hover:text-sky-600" href="/blog">Blog</Link></li>
+                <li><Link className="hover:text-sky-600" href="/contact">Contact</Link></li>
               </ul>
             </nav>
           </div>
