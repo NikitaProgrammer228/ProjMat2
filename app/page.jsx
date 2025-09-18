@@ -30,9 +30,9 @@ export default function HomePage() {
       {/* Sales Block Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-4 gap-8">
             {/* Main Sales Block */}
-            <div className="lg:col-span-1 bg-gradient-to-br from-sky-600 to-sky-700 rounded-2xl p-8 text-white relative overflow-hidden">
+            <div className="lg:col-span-2 bg-gradient-to-br from-sky-600 to-sky-700 rounded-2xl p-8 text-white relative overflow-hidden">
               {/* Decorative circles */}
               <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full"></div>
               <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-white/10 rounded-full"></div>
@@ -102,6 +102,25 @@ export default function HomePage() {
                     </h3>
                     <p className="text-slate-600 leading-relaxed">
                       Need new brackets, mounts, or custom parts? Get priority access to our workshop with 20% discount on all fabrication work.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Block 3 */}
+              <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <div className="bg-purple-100 text-purple-700 text-xs font-semibold px-3 py-1 rounded-full">
+                      Future-Ready
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                      AI-Ready Surveillance Systems
+                    </h3>
+                    <p className="text-slate-600 leading-relaxed">
+                      Install today's technology that's ready for tomorrow's AI features. Smart analytics, facial recognition, and automated alerts.
                     </p>
                   </div>
                 </div>
