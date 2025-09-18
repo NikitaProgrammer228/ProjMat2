@@ -229,7 +229,7 @@ export default function HomePage() {
                 <h3 className="font-semibold text-slate-900 mb-2">FENS National Project</h3>
                 <p>P.O.Box – 180, Postal Code-123</p>
                 <p>Muscat, Sultanate of Oman</p>
-                <p>✉️ <a className="hover:underline" href="mailto:support@fensoman.com">support@fensoman.com</a></p>
+                <p><a className="hover:underline" href="mailto:support@fensoman.com">support@fensoman.com</a></p>
                 <p><a className="hover:underline" href="tel:+96822006467">+968 22006467</a></p>
               </div>
               
