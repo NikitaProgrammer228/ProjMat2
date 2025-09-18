@@ -229,21 +229,21 @@ export default function HomePage() {
                 <h3 className="font-semibold text-slate-900 mb-2">FENS National Project</h3>
                 <p>P.O.Box – 180, Postal Code-123</p>
                 <p>Muscat, Sultanate of Oman</p>
-                <p>✉️ Email: <a className="hover:underline" href="mailto:support@fensoman.com">support@fensoman.com</a></p>
-                <p>Office No.: <a className="hover:underline" href="tel:+96822006467">+968 22006467</a></p>
+                <p>✉️ <a className="hover:underline" href="mailto:support@fensoman.com">support@fensoman.com</a></p>
+                <p><a className="hover:underline" href="tel:+96822006467">+968 22006467</a></p>
               </div>
               
               <div>
                 <h4 className="font-semibold text-slate-900 mb-2">Contact:</h4>
                 <div className="space-y-3">
                   <div>
-                    <p className="font-medium">Sales team manager</p>
+                    <p className="font-light">Sales team manager</p>
                     <p className="font-medium">Shridhar Paripelli:</p>
                     <p><a className="hover:underline" href="mailto:shree@fensoman.com">shree@fensoman.com</a></p>
                     <p><a className="hover:underline" href="tel:+96895085611">+968 95085611</a></p>
                   </div>
                   <div>
-                    <p className="font-medium">Fabrication and maintenance manager</p>
+                    <p className="font-light">Fabrication and maintenance manager</p>
                     <p className="font-medium">Mohammed AL Busaidi:</p>
                     <p><a className="hover:underline" href="mailto:mohammed@fensoman.com">mohammed@fensoman.com</a></p>
                     <p><a className="hover:underline" href="tel:+96898042994">+968 98042994</a></p>
