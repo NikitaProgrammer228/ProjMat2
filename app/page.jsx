@@ -223,12 +223,34 @@ export default function HomePage() {
         <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-10 items-start">
           <div>
             <h2 className="text-3xl font-bold tracking-tight">Ready to get started?</h2>
-            <p className="mt-3 text-slate-600">Tell us about your sites and timelines. We'll respond within one business day.</p>
-            <ul className="mt-6 space-y-3 text-slate-700">
-              <li>📞 <a className="hover:underline" href="tel:+96822006467">+968 22006467</a></li>
-              <li>✉️ <a className="hover:underline" href="mailto:support@fensoman.com">support@fensoman.com</a></li>
-              <li>📍 P.O.Box 180, Muscat, Oman</li>
-            </ul>
+            <p className="mt-3 text-slate-600">Tell us about your sites and timelines.</p>
+            <div className="mt-6 space-y-4 text-slate-700">
+              <div>
+                <h3 className="font-semibold text-slate-900 mb-2">FENS National Project</h3>
+                <p>P.O.Box – 180, Postal Code-123</p>
+                <p>Muscat, Sultanate of Oman</p>
+                <p>✉️ Email: <a className="hover:underline" href="mailto:support@fensoman.com">support@fensoman.com</a></p>
+                <p>Office No.: <a className="hover:underline" href="tel:+96822006467">+968 22006467</a></p>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-slate-900 mb-2">Contact:</h4>
+                <div className="space-y-3">
+                  <div>
+                    <p className="font-medium">Sales team manager</p>
+                    <p className="font-medium">Shridhar Paripelli:</p>
+                    <p><a className="hover:underline" href="mailto:shree@fensoman.com">shree@fensoman.com</a></p>
+                    <p><a className="hover:underline" href="tel:+96895085611">+968 95085611</a></p>
+                  </div>
+                  <div>
+                    <p className="font-medium">Fabrication and maintenance manager</p>
+                    <p className="font-medium">Mohammed AL Busaidi:</p>
+                    <p><a className="hover:underline" href="mailto:mohammed@fensoman.com">mohammed@fensoman.com</a></p>
+                    <p><a className="hover:underline" href="tel:+96898042994">+968 98042994</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <form className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm" action="https://formspree.io/f/your-id" method="POST">
             <div className="grid sm:grid-cols-2 gap-4">
