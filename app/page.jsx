@@ -18,7 +18,7 @@ export default function HomePage() {
         {/* Mobile overlay to improve text readability */}
         <div className="absolute inset-0 bg-black/20 md:bg-transparent" />
         <div className="container mx-auto px-4">
-          <div className="relative py-20 md:py-28 pl-4 md:pl-24 lg:pl-48 xl:pl-40 2xl:pl-40">
+          <div className="relative py-20 md:py-28 pl-4 md:pl-24 lg:pl-48 xl:pl-56 2xl:pl-40">
             <p className="mt-40 max-w-2xl text-xl font-semibold text-white md:text-slate-700 drop-shadow-lg">Custom Solutions for Real Needs<br />From perimeter protection to smart networks — we make it simple.</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="/services" className="inline-flex items-center rounded-xl bg-sky-600 text-white px-6 py-3 font-medium shadow hover:bg-sky-700">Our Services</a>
