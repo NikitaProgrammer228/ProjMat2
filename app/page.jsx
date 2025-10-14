@@ -79,7 +79,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-slate-900 mb-2">
-                      Free System Health Check Worth $500
+                      Free System Health
                     </h3>
                     <p className="text-slate-600 leading-relaxed">
                       Switch your maintenance to FENS and get a complete technical audit of all your systems at no extra cost.
