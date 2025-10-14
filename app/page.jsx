@@ -252,7 +252,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <form className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm" action="https://formspree.io/f/mjkabjly" method="POST">
+          <form className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm" action="https://formspree.io/f/xkgqbjpq" method="POST">
             <div className="grid sm:grid-cols-2 gap-4">
               <label className="block" htmlFor="name"><span className="text-sm">Name</span><input id="name" name="name" required className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"/></label>
               <label className="block" htmlFor="email"><span className="text-sm">Email</span><input id="email" name="email" type="email" required className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2"/></label>
