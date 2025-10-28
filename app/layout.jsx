@@ -5,10 +5,13 @@ export const metadata = {
 import "./globals.css";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
+import HashTokenHandler from "../components/HashTokenHandler";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="antialiased text-slate-800 bg-white">
+        <HashTokenHandler />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

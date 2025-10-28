@@ -9,6 +9,47 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
       window.CMS_MANUAL_INIT = true;
+      // Initialize Netlify Identity to handle recovery tokens
+      // Wait for both DOM and Netlify Identity to be ready
+      function initNetlifyIdentity() {
+        if (window.netlifyIdentity) {
+          // Initialize the widget if not already initialized
+          if (typeof window.netlifyIdentity.init === 'function') {
+            window.netlifyIdentity.init();
+          }
+          
+          // Check if there's a recovery token in the hash
+          const hash = window.location.hash;
+          if (hash && hash.includes('recovery_token')) {
+            // The widget should automatically detect recovery_token in hash
+            // But we can explicitly open recovery mode if needed
+            setTimeout(() => {
+              if (window.netlifyIdentity && window.netlifyIdentity.open) {
+                window.netlifyIdentity.open('recovery');
+              }
+            }, 100);
+          }
+          
+          // Handle successful login after recovery
+          window.netlifyIdentity.on('login', (user) => {
+            // Close the widget after successful login/recovery
+            if (window.netlifyIdentity.close) {
+              window.netlifyIdentity.close();
+            }
+            // Refresh to show CMS interface
+            window.location.href = '/admin/';
+          });
+        } else {
+          // Retry if widget not loaded yet
+          setTimeout(initNetlifyIdentity, 50);
+        }
+      }
+      
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initNetlifyIdentity);
+      } else {
+        initNetlifyIdentity();
+      }
     </script>
     <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
     <script>
