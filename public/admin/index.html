@@ -6,92 +6,9 @@
     <title>CMS</title>
   </head>
   <body>
-    <script>
-      // Normalize Netlify Identity tokens so the widget can read them
-      (function() {
-        var h = window.location.hash || '';
-        var s = window.location.search || '';
-        var hasTokenInHash = /(?:invite_token|recovery_token|confirmation_token)=/.test(h);
-        var hasTokenInSearch = /(?:invite_token|recovery_token|confirmation_token)=/.test(s);
-        // If token is in query string but not in hash, mirror it to hash
-        if (!hasTokenInHash && hasTokenInSearch) {
-          var fragment = '#' + (s.charAt(0) === '?' ? s.substring(1) : s);
-          try {
-            // Keep URL stable without reload; identity reads from hash
-            history.replaceState(null, '', window.location.pathname + s + fragment);
-          } catch (_) {
-            window.location.hash = fragment;
-          }
-        }
-      })();
-    </script>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
       window.CMS_MANUAL_INIT = true;
-      // Initialize Netlify Identity to handle recovery tokens
-      // Wait for both DOM and Netlify Identity to be ready
-      function initNetlifyIdentity() {
-        console.log('Initializing Netlify Identity...');
-        if (window.netlifyIdentity) {
-          console.log('Netlify Identity found, initializing...');
-          // Initialize the widget if not already initialized
-          if (typeof window.netlifyIdentity.init === 'function') {
-            window.netlifyIdentity.init();
-            console.log('Netlify Identity initialized');
-          }
-          
-          // Ensure widget sees the token in the hash (may have been mirrored above)
-          const hash = window.location.hash || '';
-          console.log('Hash detected:', hash); // Debug log
-          
-          function openByHash() {
-            if (!(window.netlifyIdentity && window.netlifyIdentity.open)) return;
-            if (hash.includes('invite_token')) {
-              console.log('Opening Netlify Identity (signup)');
-              window.netlifyIdentity.open('signup');
-            } else if (hash.includes('recovery_token')) {
-              console.log('Opening Netlify Identity (recovery)');
-              window.netlifyIdentity.open('recovery');
-            } else if (hash.includes('confirmation_token')) {
-              console.log('Opening Netlify Identity (login)');
-              window.netlifyIdentity.open('login');
-            } else {
-              console.log('Opening Netlify Identity');
-              window.netlifyIdentity.open();
-            }
-          }
-          
-          // Open shortly after init and retry once in case the widget isn't ready yet
-          setTimeout(openByHash, 200);
-          setTimeout(openByHash, 800);
-          
-          // Handle successful login/signup after token processing
-          window.netlifyIdentity.on('login', (user) => {
-            // Close the widget after successful login/signup
-            if (window.netlifyIdentity.close) {
-              window.netlifyIdentity.close();
-            }
-            // Refresh to show CMS interface
-            window.location.href = '/admin/';
-          });
-          
-          // Handle signup completion
-          window.netlifyIdentity.on('signup', (user) => {
-            // Close the widget after successful signup
-            if (window.netlifyIdentity.close) {
-              window.netlifyIdentity.close();
-            }
-            // Refresh to show CMS interface
-            window.location.href = '/admin/';
-          });
-        } else {
-          // Retry if widget not loaded yet
-          setTimeout(initNetlifyIdentity, 50);
-        }
-      }
-      
-      // Call immediately after the identity script has loaded to catch tokens before other scripts modify the hash
-      initNetlifyIdentity();
     </script>
     <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
     <script>
