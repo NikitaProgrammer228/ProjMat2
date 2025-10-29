@@ -9,9 +9,11 @@ export default function HashTokenHandler() {
     if (hash && (hash.includes('recovery_token') || 
                  hash.includes('invite_token') || 
                  hash.includes('confirmation_token'))) {
-      // Redirect to /admin so CMS can handle the token
+      // Convert hash token to query param and redirect to /admin
+      // Netlify Identity often handles tokens better as query params
+      const query = hash.startsWith('#') ? hash.substring(1) : hash;
       if (!window.location.pathname.startsWith('/admin')) {
-        window.location.href = `/admin${hash}`;
+        window.location.replace(`/admin/?${query}`);
       }
     }
   }, []);
