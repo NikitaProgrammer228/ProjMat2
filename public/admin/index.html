@@ -12,27 +12,57 @@
       // Initialize Netlify Identity to handle recovery tokens
       // Wait for both DOM and Netlify Identity to be ready
       function initNetlifyIdentity() {
+        console.log('Initializing Netlify Identity...');
         if (window.netlifyIdentity) {
+          console.log('Netlify Identity found, initializing...');
           // Initialize the widget if not already initialized
           if (typeof window.netlifyIdentity.init === 'function') {
             window.netlifyIdentity.init();
+            console.log('Netlify Identity initialized');
           }
           
-          // Check if there's a recovery token in the hash
+          // Check if there's a Netlify Identity token in the hash
           const hash = window.location.hash;
-          if (hash && hash.includes('recovery_token')) {
-            // The widget should automatically detect recovery_token in hash
-            // But we can explicitly open recovery mode if needed
+          console.log('Hash detected:', hash); // Debug log
+          
+          if (hash && (hash.includes('recovery_token') || 
+                      hash.includes('invite_token') || 
+                      hash.includes('confirmation_token'))) {
+            console.log('Token found in hash, opening appropriate modal'); // Debug log
+            
+            // The widget should automatically detect tokens in hash
+            // But we can explicitly open the appropriate mode
             setTimeout(() => {
               if (window.netlifyIdentity && window.netlifyIdentity.open) {
-                window.netlifyIdentity.open('recovery');
+                if (hash.includes('recovery_token')) {
+                  console.log('Opening recovery modal');
+                  window.netlifyIdentity.open('recovery');
+                } else if (hash.includes('invite_token')) {
+                  console.log('Opening signup modal');
+                  window.netlifyIdentity.open('signup');
+                } else if (hash.includes('confirmation_token')) {
+                  console.log('Opening login modal');
+                  window.netlifyIdentity.open('login');
+                }
+              } else {
+                console.log('Netlify Identity widget not ready');
               }
-            }, 100);
+            }, 200); // Increased timeout
           }
           
-          // Handle successful login after recovery
+          // Handle successful login/signup after token processing
           window.netlifyIdentity.on('login', (user) => {
-            // Close the widget after successful login/recovery
+            // Close the widget after successful login/signup
+            if (window.netlifyIdentity.close) {
+              window.netlifyIdentity.close();
+            }
+            // Refresh to show CMS interface
+            window.location.href = '/admin/';
+          });
+          
+          // Handle signup completion
+          window.netlifyIdentity.on('signup', (user) => {
+            // Close the widget after successful signup
             if (window.netlifyIdentity.close) {
               window.netlifyIdentity.close();
             }
