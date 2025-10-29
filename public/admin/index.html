@@ -7,14 +7,20 @@
   </head>
   <body>
     <script>
-      // If hash contains Netlify Identity token, convert it to query and reload
+      // Normalize Netlify Identity tokens so the widget can read them
       (function() {
         var h = window.location.hash || '';
-        if (h && (h.indexOf('invite_token=') !== -1 || h.indexOf('recovery_token=') !== -1 || h.indexOf('confirmation_token=') !== -1)) {
-          var q = h.charAt(0) === '#' ? h.substring(1) : h;
-          // Prevent infinite loops: only redirect if search is empty
-          if (!window.location.search) {
-            window.location.replace(window.location.pathname + '?' + q);
+        var s = window.location.search || '';
+        var hasTokenInHash = /(?:invite_token|recovery_token|confirmation_token)=/.test(h);
+        var hasTokenInSearch = /(?:invite_token|recovery_token|confirmation_token)=/.test(s);
+        // If token is in query string but not in hash, mirror it to hash
+        if (!hasTokenInHash && hasTokenInSearch) {
+          var fragment = '#' + (s.charAt(0) === '?' ? s.substring(1) : s);
+          try {
+            // Keep URL stable without reload; identity reads from hash
+            history.replaceState(null, '', window.location.pathname + s + fragment);
+          } catch (_) {
+            window.location.hash = fragment;
           }
         }
       })();
@@ -34,34 +40,17 @@
             console.log('Netlify Identity initialized');
           }
           
-          // Check if there's a Netlify Identity token in the hash
-          const hash = window.location.hash;
+          // Ensure widget sees the token in the hash (may have been mirrored above)
+          const hash = window.location.hash || '';
           console.log('Hash detected:', hash); // Debug log
-          
-          if (hash && (hash.includes('recovery_token') || 
-                      hash.includes('invite_token') || 
-                      hash.includes('confirmation_token'))) {
-            console.log('Token found in hash, opening appropriate modal'); // Debug log
-            
-            // The widget should automatically detect tokens in hash
-            // But we can explicitly open the appropriate mode
-            setTimeout(() => {
-              if (window.netlifyIdentity && window.netlifyIdentity.open) {
-                if (hash.includes('recovery_token')) {
-                  console.log('Opening recovery modal');
-                  window.netlifyIdentity.open('recovery');
-                } else if (hash.includes('invite_token')) {
-                  console.log('Opening signup modal');
-                  window.netlifyIdentity.open('signup');
-                } else if (hash.includes('confirmation_token')) {
-                  console.log('Opening login modal');
-                  window.netlifyIdentity.open('login');
-                }
-              } else {
-                console.log('Netlify Identity widget not ready');
-              }
-            }, 200); // Increased timeout
-          }
+          // The widget will auto-handle invite/recovery/confirmation tokens in hash
+          // We still open the widget shortly after init to surface the UI
+          setTimeout(() => {
+            if (window.netlifyIdentity && window.netlifyIdentity.open) {
+              // Open in a neutral mode; token in hash will control flow
+              window.netlifyIdentity.open();
+            }
+          }, 150);
           
           // Handle successful login/signup after token processing
           window.netlifyIdentity.on('login', (user) => {
