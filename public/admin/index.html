@@ -43,14 +43,27 @@
           // Ensure widget sees the token in the hash (may have been mirrored above)
           const hash = window.location.hash || '';
           console.log('Hash detected:', hash); // Debug log
-          // The widget will auto-handle invite/recovery/confirmation tokens in hash
-          // We still open the widget shortly after init to surface the UI
-          setTimeout(() => {
-            if (window.netlifyIdentity && window.netlifyIdentity.open) {
-              // Open in a neutral mode; token in hash will control flow
+          
+          function openByHash() {
+            if (!(window.netlifyIdentity && window.netlifyIdentity.open)) return;
+            if (hash.includes('invite_token')) {
+              console.log('Opening Netlify Identity (signup)');
+              window.netlifyIdentity.open('signup');
+            } else if (hash.includes('recovery_token')) {
+              console.log('Opening Netlify Identity (recovery)');
+              window.netlifyIdentity.open('recovery');
+            } else if (hash.includes('confirmation_token')) {
+              console.log('Opening Netlify Identity (login)');
+              window.netlifyIdentity.open('login');
+            } else {
+              console.log('Opening Netlify Identity');
               window.netlifyIdentity.open();
             }
-          }, 150);
+          }
+          
+          // Open shortly after init and retry once in case the widget isn't ready yet
+          setTimeout(openByHash, 200);
+          setTimeout(openByHash, 800);
           
           // Handle successful login/signup after token processing
           window.netlifyIdentity.on('login', (user) => {
