@@ -90,11 +90,8 @@
         }
       }
       
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initNetlifyIdentity);
-      } else {
-        initNetlifyIdentity();
-      }
+      // Call immediately after the identity script has loaded to catch tokens before other scripts modify the hash
+      initNetlifyIdentity();
     </script>
     <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
     <script>
