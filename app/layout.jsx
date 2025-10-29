@@ -5,13 +5,10 @@ export const metadata = {
 import "./globals.css";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
-import IdentityRedirect from "../components/IdentityRedirect";
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="antialiased text-slate-800 bg-white">
-        <IdentityRedirect />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

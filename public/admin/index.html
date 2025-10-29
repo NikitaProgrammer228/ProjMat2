@@ -9,24 +9,6 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
       window.CMS_MANUAL_INIT = true;
-      
-      // Initialize Netlify Identity widget to handle recovery tokens
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', user => {
-          if (!user) {
-            // Check for recovery token in URL
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('recovery_token')) {
-              window.netlifyIdentity.open('recovery');
-            } else if (urlParams.get('invite_token')) {
-              window.netlifyIdentity.open('login');
-            } else if (urlParams.get('confirmation_token')) {
-              window.netlifyIdentity.open('login');
-            }
-          }
-        });
-        window.netlifyIdentity.init();
-      }
     </script>
     <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
     <script>
